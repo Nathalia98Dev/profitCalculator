@@ -19,8 +19,18 @@
             <img src="img/Logo-color.png" width="240" height="100">
        </div> 
        <div style="text-align: center;">
-           <p>Si de tus referidos <input type="text" name="referidos" id="referidos"> recargan al menos <input type="text" name="dolares" id="dolares"> USD</p>
-           <p>y lo hacen <input type="text" name="cantidad" id="cantidad"> veces al mes</p>
+           <p>Si de tus referidos <input type="number" name="referidos" id="cantReferidos"> recargan al menos 
+            <input type="number" name="dolares" id="dolares"> USD</p>
+            <table>
+                <tr>
+                    <td>
+                        <p>y lo hacen <input type="number" name="cantidad" id="cantidad"> veces al mes</p>
+                    </td>
+                    <td style="text-align: right;">
+                        <button onclick="calcularTotalRecargas();">Calcular</button>
+                    </td>
+                </tr>
+            </table>
         </div>
         <div>
             <table>
@@ -29,7 +39,7 @@
                         Obtendras un total de 
                     </td>
                     <td>
-                        <input type="text" class="total" disabled value="">
+                        <input type="text" class="total" id="totalRecarga" value="" disabled>
                     </td>
                     <td></td>
                 </tr>
@@ -38,7 +48,7 @@
                         Los cuales seran pagados
                     </td>
                     <td>
-                        <input type="text" class="f_pago" disabled value="">
+                        <input type="text" class="f_pago" id="fPago1" disabled value="">
                     </td>
                     <td style="font-size: 12px; font-weight: bold;">
                         USDs (En puntos redimibles de forma gratuita por USD) *
@@ -49,7 +59,7 @@
                         y 
                     </td>
                     <td>
-                        <input type="text" class="f_pago" disabled value="">
+                        <input type="text" class="f_pago" id="fPago2" disabled value="">
                     </td>
                     <td style="font-size: 12px; font-weight: bold;">
                         En token 7UT
@@ -65,4 +75,6 @@
     </body>
 </html>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/index.js"></script>
