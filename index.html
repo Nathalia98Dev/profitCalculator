@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de comisiones</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+
+        <ul>
+            <li><a class="active" href="index.html" id="referidos">Calculadora referidos</a></li>
+            <li><a href="recargas.html" id="recargas">Calculadoras recargas</a></li>
+            <li><a href="tokens.html" id="cToken">Compra de token</a></li>
+        </ul>
+
+       <div style="text-align: center;">
+            <img src="img/Logo-color.png" width="240" height="100">
+       </div> 
+       <div style="text-align: center;">
+           <p>Si tienes <input type="text" name="contactos" id="contactos"> contactos y el <input type="text" name="cont_membresia" id="cont_membresia"> adquiere una membresia</p>
+        </div>
+        <div style="text-align: center;">
+            <p>Total Menbresias: <input type="text" name="total_membresia" id="total_membresia" disabled></p>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td style="font-size: 25px; font-weight: bold;">
+                        Podrias generar 
+                    </td>
+                    <td>
+                        <input type="text" class="total" disabled value="">
+                    </td>
+                    <td style="font-size: 25px; font-weight: bold;">
+                        los cuales verás reflejados
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="text" class="f_pago" disabled value="">
+                    </td>
+                    <td>
+                        USDs (En puntos redimibles de forma gratuita por USD) *
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="text" class="f_pago" disabled value="">
+                    </td>
+                    <td>
+                        En token 7UT
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="text-align: center;">
+            <h4>Como usar la calculadora de posibles comisiones?</h4>
+            <p>Usar esta calculadora es sencillo, llena el cuadro de texto acorde a tus expectativas , Todo lo que se muestra en esta simulacion es representativo y no garantiza ingresos o ganancias Futuras.</p>
+            <h6>* Los puntos seran redimibles sin costo desde 100 USD en adelante</h6>
+        </div>
+        <div>
+            <table class="paquete_memb">
+                <tr class="rows">
+                    <td colspan="4">
+                        <h4>Si crees que la distribucion sera distinta en  tu caso puedes modificar libremente la cantidad de membresias por paquetes.</h4>
+                    </td>
+                </tr>
+                <tr class="rows">
+                    <td class="columns">
+                        Valor Del Paquete
+                    </td>
+                    <td class="columns">
+                        Costo Mensual de la membresia
+                    </td>
+                    <td class="columns">
+                        Membresia
+                    </td>
+                    <td class="columns">
+                        Cantidad de membresias adquiridas
+                    </td>
+                </tr>
+                <tr class="rows">
+                    <td class="columns">
+                        $ -                         
+                    </td>
+                    <td class="columns">
+                        $ -
+                    </td>
+                    <td class="columns">
+                        Silver
+                    </td>
+                    <td class="column4 columns">
+                        <input type="text" id="mem_adquiridas" name="mem_adquiridas" disabled>
+                    </td>
+                </tr>
+                <tr class="rows">
+                    <td class="columns">
+                        $ 50 
+                    </td>
+                    <td class="columns">
+                        $ 10                       
+                    </td>
+                    <td class="columns">
+                        Gold
+                    </td>
+                    <td class="column4 columns">
+                        <input type="text" id="mem_adquiridas" name="mem_adquiridas" disabled>                        
+                    </td>
+                </tr>
+                <tr class="rows">
+                    <td class="columns">
+                        $ 100
+                    </td>
+                    <td class="columns">
+                        $ 30
+                    </td>
+                    <td class="columns">
+                        Carbon
+                    </td>
+                    <td class="column4 columns">
+                        <input type="text" id="mem_adquiridas" name="mem_adquiridas" disabled>
+                    </td>
+                </tr>
+                <tr class="rows">
+                    <td class="columns"> 
+                        $ 60 
+                    </td>
+                    <td class="columns">
+                        $ 20
+                    </td>
+                    <td class="columns">
+                        Enterprice
+                    </td>
+                    <td class="column4 columns">
+                        <input type="text" id="mem_adquiridas" name="mem_adquiridas" disabled>                        
+                    </td>
+                </tr>
+                <tr class="rows">
+                    <td class="columns">
+                        $ 300
+                    </td>
+                    <td class="columns">
+                        $ 30
+                    </td>
+                    <td class="columns">
+                        Hytapper
+                    </td>
+                    <td class="column4 columns">
+                        <input type="text" id="mem_adquiridas" name="mem_adquiridas" disabled>                        
+                    </td>
+                </tr>
+                <tr class="rows">
+                    <td class="columns"> 
+                        $ 350
+                    </td>
+                    <td class="columns">
+                        $ 50
+                    </td>
+                    <td class="columns">
+                        Seven for Earth
+                    </td>
+                    <td class="column4 columns">
+                        <input type="text" id="mem_adquiridas" name="mem_adquiridas" disabled>                        
+                    </td>
+                </tr>
+                <tr class="rows">
+                    <td class="columns"> 
+                        $ 600
+                    </td>
+                    <td class="columns">
+                        $ 60                        
+                    </td>
+                    <td class="columns">
+                        Bussines Hytapper
+                    </td>
+                    <td class="column4 columns">
+                        <input type="text" id="mem_adquiridas" name="mem_adquiridas" disabled>                        
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="column4 columns">
+                        <input type="text" id="mem_adquiridas" name="mem_adquiridas" disabled>                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
+
+<script src="js/index.js"></script>
