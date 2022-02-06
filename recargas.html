@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de comisiones</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+
+        <ul>
+            <li><a href="index.html" id="referidos">Calculadora referidos</a></li>
+            <li><a class="active" href="recargas.html" id="recargas">Calculadoras recargas</a></li>
+            <li><a href="tokens.html" id="cToken">Compra de token</a></li>
+        </ul>
+
+       <div style="text-align: center;">
+            <img src="img/Logo-color.png" width="240" height="100">
+       </div> 
+       <div style="text-align: center;">
+           <p>Si de tus referidos <input type="text" name="referidos" id="referidos"> recargan al menos <input type="text" name="dolares" id="dolares"> USD</p>
+           <p>y lo hacen <input type="text" name="cantidad" id="cantidad"> veces al mes</p>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td style="font-size: 25px; font-weight: bold;">
+                        Obtendras un total de 
+                    </td>
+                    <td>
+                        <input type="text" class="total" disabled value="">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; font-weight: bold; text-align: right;">
+                        Los cuales seran pagados
+                    </td>
+                    <td>
+                        <input type="text" class="f_pago" disabled value="">
+                    </td>
+                    <td style="font-size: 12px; font-weight: bold;">
+                        USDs (En puntos redimibles de forma gratuita por USD) *
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 12px; font-weight: bold; text-align: right;">
+                        y 
+                    </td>
+                    <td>
+                        <input type="text" class="f_pago" disabled value="">
+                    </td>
+                    <td style="font-size: 12px; font-weight: bold;">
+                        En token 7UT
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="text-align: center;">
+            <h4>Como usar la calculadora de posibles comisiones? </h4>
+            <p>Usar esta calculadora es sencillo, llena el cuadro de texto acorde a tus expectativas , Todo lo que se muestra en esta simulacion es representativo y no garantiza ingresos o ganancias Futuras.</p>
+            <h6>* Los puntos seran redimibles sin costo desde 100 USD en adelante</h6>
+        </div>
+    </body>
+</html>
+
+<script src="js/index.js"></script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de comisiones</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+
+        <ul>
+            <li><a href="index.html" id="referidos">Calculadora referidos</a></li>
+            <li><a href="recargas.html" id="recargas">Calculadoras recargas</a></li>
+            <li><a class="active" href="tokens.html" id="cToken">Compra de token</a></li>
+        </ul>
+
+        <br>
+
+       <div style="text-align: center;">
+            <img src="img/Logo-color.png" width="240" height="100">
+       </div>
+       
+       <br>
+        
+       <div>
+            <table>
+                <tr>
+                    <td style="text-align: right;">
+                        Si compras 
+                    </td>
+                    <td>
+                        <input type="text" class="token">
+                    </td>
+                    <td>
+                        tokens de 7UT
+                    </td>
+                    <td rowspan="3">
+                        <canvas id="myChart" width="400" height="400" style="margin-left: 30px;"></canvas>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        y los conservas por 
+                    </td>
+                    <td style="text-align: center;">
+                        <select id="select_meses">
+                            <option value="">Seleccione</option>
+                        </select>
+                    </td>
+                    <td>
+                        meses
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        obtendras un total de 
+                    </td>
+                    <td style="text-align: center;">
+                        <input type="text" class="f_pago" disabled value="">
+                    </td>
+                    <td>
+                        7UT
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="text-align: center;">
+            <h4>Como usar la calculadora de posibles comisiones?</h4>
+            <p>Usar esta calculadora es sencillo, llena el cuadro de texto acorde a tus expectativas , Todo lo que se muestra en esta simulacion es representativo y no garantiza ingresos o ganancias Futuras.</p>
+            <h6>* Los puntos seran redimibles sin costo desde 100 USD en adelante</h6>
+        </div>
+    </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/index.js"></script>
