@@ -1,41 +1,60 @@
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['4', '6', '12', '24', '36'],
-        datasets: [{
-            label: 'Meses',
-            data: [1, 3, 2, 5],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
+var ganancia_silver = 0;
+var ganancia_gold = 2;
+var ganancia_carbon = 4;
+var ganancia_enterprice = 4;
+var ganancia_hytapper = 6;
+var ganancia_seven = 10;
+var ganancia_bussines = 12;
 
-$('#select_meses').append('<option value="">4</option>');
-$('#select_meses').append('<option value="">6</option>');
-$('#select_meses').append('<option value="">12</option>');
-$('#select_meses').append('<option value="">24</option>');
-$('#select_meses').append('<option value="">36</option>');
+function calcularTotalDefault() {
+    var porcentaje = $('#cont_membresia').val() / 100;
+    var total_membresia = $('#contactos').val() * porcentaje;
+
+    $('#total_membresia').val(parseInt(total_membresia));
+    
+    $('#mGold').val(parseInt(total_membresia * 0.38));
+    $('#mCarbon').val(parseInt(total_membresia * 0.19));
+    $('#mEnterprice').val(parseInt(total_membresia * 0.11));
+    $('#mHytapper').val(parseInt(total_membresia * 0.18));
+    $('#mSeven').val(parseInt(total_membresia * 0.09));
+    $('#mBussines').val(parseInt(total_membresia * 0.05));
+    $('#mTotal').val(parseInt(total_membresia));
+
+    var totalG = (($('#mSilver').val() * ganancia_silver) + 
+                    ($('#mGold').val() * ganancia_gold) +
+                    ($('#mCarbon').val() * ganancia_carbon) +
+                    ($('#mEnterprice').val() * ganancia_enterprice) +
+                    ($('#mHytapper').val() * ganancia_hytapper) +
+                    ($('#mSeven').val() * ganancia_seven) +
+                    ($('#mBussines').val() * ganancia_bussines));
+    
+    $('#totalG').val("$" + totalG);
+
+    $('#f_pago1').val("$" + (totalG / 2));
+    $('#f_pago2').val("$" + (totalG / 2));
+}
+
+function calcularTotalManual() {
+    var totalG = (($('#mSilver').val() * ganancia_silver) + 
+                    ($('#mGold').val() * ganancia_gold) +
+                    ($('#mCarbon').val() * ganancia_carbon) +
+                    ($('#mEnterprice').val() * ganancia_enterprice) +
+                    ($('#mHytapper').val() * ganancia_hytapper) +
+                    ($('#mSeven').val() * ganancia_seven) +
+                    ($('#mBussines').val() * ganancia_bussines));
+    
+    $('#totalG').val("$" + totalG);
+
+    $('#f_pago1').val("$" + (totalG / 2));
+    $('#f_pago2').val("$" + (totalG / 2));
+}
+
+// recargas
+function calcularTotalRecargas() {
+    var totalRecargas = $('#cantReferidos').val() * $('#dolares').val() * $('#cantidad').val() * 0.005;
+
+    $('#totalRecarga').val(totalRecargas);
+
+    $('#fPago1').val("$" + (totalRecargas / 2));
+    $('#fPago2').val("$" + (totalRecargas / 2));
+}

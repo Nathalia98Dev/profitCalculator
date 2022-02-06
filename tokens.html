@@ -30,13 +30,13 @@
                         Si compras 
                     </td>
                     <td>
-                        <input type="text" class="token">
+                        <input type="text" class="token" id="cant_token">
                     </td>
                     <td>
                         tokens de 7UT
                     </td>
                     <td rowspan="3">
-                        <canvas id="myChart" width="400" height="400" style="margin-left: 30px;"></canvas>
+                        <canvas id="myChart" width="400" height="200" style="margin-left: 30px;"></canvas>
                     </td>
                 </tr>
                 <tr>
@@ -53,14 +53,19 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="text-align: right;">
+                    <td style="font-size: 25px; font-weight: bold; text-align: right;">
                         obtendras un total de 
                     </td>
                     <td style="text-align: center;">
-                        <input type="text" class="f_pago" disabled value="">
+                        <input type="text" class="total" id="totalToken" disabled value="">
                     </td>
                     <td>
                         7UT
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center;">
+                        <button onclick="calcularTotalToken();">Calcular</button>
                     </td>
                 </tr>
             </table>
@@ -75,4 +80,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/grafica.js"></script>
 <script src="js/index.js"></script>
